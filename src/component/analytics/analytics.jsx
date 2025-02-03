@@ -12,7 +12,7 @@ const analytic = () => {
         const getTopbooks = async () => {
             try {
                 const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-                const response = await axios.get('http://localhost:3007/analytics/topBook', { headers: { Authorization: `Bearer ${authToken.token}` } })
+                const response = await axios.get('https://library-analytics-microservices.onrender.com/analytics/topBook', { headers: { Authorization: `Bearer ${authToken.token}` } })
                 setTopBook(response.data)
             } catch (error) {
                 console.log(error.message)

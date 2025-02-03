@@ -17,7 +17,7 @@ const bar = () => {
         const labels = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"]
         const getBooksAdded = async () => {
             try {
-                const response = await axios.get('http://localhost:3007/analytics/bookPerMonth')
+                const response = await axios.get('https://library-analytics-microservices.onrender.com/analytics/bookPerMonth')
                 const data = response.data
                 const count = data.map((item) => {
                     const lastTwoDigits = item._id.slice(-2);

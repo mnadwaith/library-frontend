@@ -28,7 +28,7 @@ const radar = () => {
         const getAvgReview = async () => {
             try {
                 const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-                const response = await axios.get('http://localhost:3007/analytics/avgRating', { headers: { Authorization: `Bearer ${authToken.token}` } })
+                const response = await axios.get('https://library-analytics-microservices.onrender.com/analytics/avgRating', { headers: { Authorization: `Bearer ${authToken.token}` } })
                 const data = response.data
                 const labels = data.map((item) => item._id)
                 const rating = data.map((item) => item.avgRating)
