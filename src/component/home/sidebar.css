@@ -1,0 +1,23 @@
+/* Home Content Area */
+.home-content {
+    /* margin-left: 250px; */
+    /* Space for the sidebar */
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container for Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-content {
+        margin-left: 0;
+        /* Reset margin when sidebar disappears */
+        padding: 20px;
+    }
+}

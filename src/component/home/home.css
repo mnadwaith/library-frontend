@@ -1,0 +1,14 @@
+/* Main content area */
+
+/* Ensure padding and margins are respected */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+}
