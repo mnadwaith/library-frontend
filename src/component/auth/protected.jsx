@@ -11,7 +11,7 @@ const protectedRoutes = ({ children }) => {
             try {
                 const authToken = JSON.parse(sessionStorage.getItem('authToken'))
                 if (authToken) {
-                    const response = await axios.get('http://localhost:3001/auth/authenticate', { headers: { Authorization: `Bearer ${authToken.token}` } })
+                    const response = await axios.get('https://library-auth-microservices.onrender.com/auth/authenticate', { headers: { Authorization: `Bearer ${authToken.token}` } })
                     const user = response.data
                     if (user.role == 'admin') {
                         sessionStorage.setItem('uId', user.email)

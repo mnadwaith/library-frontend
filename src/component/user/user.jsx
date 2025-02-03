@@ -11,7 +11,7 @@ const User = () => {
     useEffect(() => {
         const getUser = async () => {
             try {
-                axios.get('http://localhost:3001/auth/manage')
+                axios.get('https://library-auth-microservices.onrender.com/auth/manage')
                     .then((res) => {
                         setDatas(res.data)
                     })
@@ -54,7 +54,7 @@ const User = () => {
         if (window.confirm("Are you sure you want to make these changes?")) {
             try {
                 const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-                await axios.put(`http://localhost:3001/auth/manage/${editUser._id}`, { name: editUser.name, role: editUser.role }, { headers: { 'Authorization': `Bearer ${authToken.token}` } })
+                await axios.put(`https://library-auth-microservices.onrender.com/auth/manage/${editUser._id}`, { name: editUser.name, role: editUser.role }, { headers: { 'Authorization': `Bearer ${authToken.token}` } })
             } catch (error) {
                 console.log(error.message)
             }
