@@ -9,7 +9,7 @@ const book = () => {
     useEffect(() => {
         const getbooks = async () => {
             const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-            axios.get('http://localhost:3003/books', { headers: { Authorization: `Bearer ${authToken.token}` } })
+            axios.get('https://library-book-microservices.onrender.com/books', { headers: { Authorization: `Bearer ${authToken.token}` } })
                 .then((res) => { setbooks(res.data) })
                 .catch((error) => {
                     console.log("Error" + error.message)

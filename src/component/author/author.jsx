@@ -8,7 +8,7 @@ const author = () => {
     useEffect(() => {
         const getAuthors = async () => {
             const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-            axios.get('http://localhost:3002/authors', { headers: { Authorization: `Bearer ${authToken.token}` } })
+            axios.get('https://library-author-microservices.onrender.com/authors', { headers: { Authorization: `Bearer ${authToken.token}` } })
                 .then((res) => { setAuthors(res.data) })
                 .catch((error) => {
                     console.log("Error" + error.message)
