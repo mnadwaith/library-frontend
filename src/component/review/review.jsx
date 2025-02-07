@@ -31,7 +31,7 @@ const review = () => {
         const getReviews = async () => {
             try {
                 const authToken = JSON.parse(sessionStorage.getItem('authToken'))
-                const response = await axios.get('http://localhost:3005/review/', { headers: { Authorization: `Bearer ${authToken.token}` } })
+                const response = await axios.get('https://library-review-microservices.onrender.com/review/', { headers: { Authorization: `Bearer ${authToken.token}` } })
                 setReviews(response.data)
             } catch (error) {
                 console.log(error.message)

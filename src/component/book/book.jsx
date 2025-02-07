@@ -28,7 +28,7 @@ const book = () => {
         try {
             const authToken = JSON.parse(sessionStorage.getItem('authToken'))
 
-            axios.get('http://localhost:3006/search', {
+            axios.get('https://library-event-microservices.onrender.com/search', {
                 headers: { Authorization: `Bearer ${authToken.token}` },
                 params: {
                     q: query,
